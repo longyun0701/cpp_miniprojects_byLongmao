@@ -14,7 +14,7 @@ long long thief[8]={1,5,20,100,250,1000,10000000,7000000000},guard[9]={0,0,0,1,2
 int life = 1,guard1,thief1,pyr;
 long score = 0;
 
-void print(const char a[])
+void print(char const* a)
 {
     int s=strlen(a) //.size();
     for(int i=0;i<s;i++)
