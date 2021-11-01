@@ -42,7 +42,7 @@ void fight(){
 		if(guard1 < 0) guard1 = 0;
 		printf("Score：%ld\n",score);
 		printf("Thickness of Pyramid: %d\n",pyr);
-		printf("Halloween Guard：%d  Theif：%d\n",guard1,thief1);
+		printf("Halloween Guards：%d  Thieves：%d\n",guard1,thief1);
 		if(thief1 <= 0){
 			printf("You win！Congratulations!\n");
 			usleep(17000);
