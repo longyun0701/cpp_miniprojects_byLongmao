@@ -1,8 +1,8 @@
 #include<iostream>
 #include<string>
 #include<vector>
-#include<conio.h>
-#include<windows.h>
+//#include<conio.h>
+//#include<windows.h>
 #include<cstdlib>
 #include<ctime>
 
@@ -20,7 +20,11 @@ void print(char a[])
         cout<<a[i];
         Sleep(200);
     }
-    getch(); 
+    
+    system("stty -echo");
+    getchar(); 
+    system("stty echo");
+    
     system("cls");
 }
 void fight(){
