@@ -85,11 +85,11 @@ void fight(){
 			sleep(0.400);
 			system("cls");
 			system("color 0c");
-			print("Mummy deteriorated！");
+			print("Mummy deteriorated!");
 			printf("Final Score：%ld\n",score);
 			sleep(1.500);
 			system("cls");
-			print("GAME OVER！"); 
+			print("GAME OVER!"); 
 			sleep(0.500);
 			return;
 		}
@@ -99,12 +99,12 @@ void fight(){
 } 
 void game(){
 	srand(time(NULL));
-	print("In ancient Egypt, 3000 years ago, you died，and ... selected a mummy.");
+	print("In ancient Egypt, 3000 years ago, you died, and ... selected a mummy.");
 	int rmummy = rand()%5 + 1,smummy;
 	printf("Select a mummy (1~5)\n");
 	scanf("%d", &smummy);
 	if(smummy==rmummy || smummy == 28){
-		printf("You get a regular mummy！continue to start the fight game...");
+		printf("You get a regular mummy! continue to start the fight game...");
 		sleep(0.600);
 		system("cls");
 		fight();
@@ -115,7 +115,7 @@ void game(){
 		system("color 0c");
 		print("Oh, no! You get an irregular mummy.");
 		print("Burned!");
-		print("GAME OVER！"); 
+		print("GAME OVER!"); 
 		return;
 	}
 }
@@ -123,7 +123,7 @@ void game(){
 int main(){
 	
 	system("title Mummy - Halloween Edition");
-	print("created by Longmao：Mummy - Special edition for Halloween 2021");
+	print("Mummy - Special edition for Halloween 2021: created by Longmao");
 	game();
 	return 0;
 }
