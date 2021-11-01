@@ -85,7 +85,7 @@ void fight(){
 			sleep(0.400);
 			system("cls");
 			system("color 0c");
-			print("Mummy deteriorated!");
+			print("Mummy deteriotated!");
 			printf("Final Score：%ld\n",score);
 			sleep(1.500);
 			system("cls");
@@ -99,8 +99,8 @@ void fight(){
 } 
 void game(){
 	srand(time(NULL));
-	print("In ancient Egypt, 3000 years ago, you died, and ... selected a mummy.");
-	int rmummy = rand()%5 + 1,smummy;
+	print("In ancient Egypt, 3000 years ago, you died, and ... selected a MUMMY.");
+	int rmummy = rand()%5 + 1, smummy;
 	printf("Select a mummy (1~5)\n");
 	scanf("%d", &smummy);
 	if(smummy==rmummy || smummy == 28){
@@ -115,7 +115,7 @@ void game(){
 		system("color 0c");
 		print("Oh, no! You get an irregular mummy.");
 		print("Burned!");
-		print("GAME OVER!"); 
+		print("GAME OVER!");
 		return;
 	}
 }
