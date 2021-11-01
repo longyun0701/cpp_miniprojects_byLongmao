@@ -32,20 +32,20 @@ void print(char a[])
 void fight(){
 	guard1 = guard[rand()%9];
 	thief1 = thief[rand()%8];
-	printf("ÐÞ½¨½ð×ÖËþ\n");
+	printf("Pyramid building ... \n");
 	pyr = rand()%5;
 	int in;
 	while(life){
 		sleep(0.700);
 		system("cls");
 		if(guard1 < 0) guard1 = 0;
-		printf("·ÖÊý£º%ld\n",score);
-		printf("½ð×ÖËþºñ¶È£º%d\n",pyr);
-		printf("ÍòÊ¥¹í£º%d  µÁÄ¹Ôô£º%d\n",guard1,thief1);
+		printf("Scoreï¼š%ld\n",score);
+		printf("Thickness of Pyramid"ï¼š%d\n",pyr);
+		printf("Halloween Guardï¼š%d  Theifï¼š%d\n",guard1,thief1);
 		if(thief1 <= 0){
-			printf("¹§Ï²»ñµÃÊ¤Àû£¡\n");
+			printf("You winï¼Congratulations!\n");
 			sleep(0.500);
-			printf("ÏÂÒ»²¨¼´½«¿ªÊ¼£¡");
+			printf("Next wave on the wayï¼");
 			score += 200;
 			pyr += 2;
 			thief1 = thief[rand()%8];
@@ -53,31 +53,31 @@ void fight(){
 			system("cls");
 		}
 		if(pyr){
-			printf("½ð×ÖËþ±»¹¥ÆÆÒ»²ã£¡\n");
+			printf("Pyramid one level clear and destroyedï¼\n");
 			score += 20;
 			pyr--;
-			printf("1£ºÕÙ¼¯ÍòÊ¥¹í	2£º×çÖä\n");
+			printf("1ï¼šCall for more Halloween Guards\t2ï¼šCurse\n");
 			scanf("%d",&in);
 			if(in == 1) guard1 = guard1*2 + 2;
 			else if(rand()%5 < 2){
-				printf("×çÖäÉúÐ§\n");
+				printf("Curse effective!\n");
 				thief1/=2;
 			}
-			else printf("×çÖäÊ§°Ü£¡\n");
+			else printf("Curse failedï¼\n");
 			if(rand()%20 < 19){
-				printf("¹íÀ´ÁË£¡\n");
+				printf("Ghosts comeï¼\n");
 			    thief1 -= (guard1 * 15);
 				guard1 = min((0-thief1) / 10,0);
 			}
 			else{
-				printf("¹íÔì·´ÁË£¡\n");
+				printf("Ghosts rebelï¼\n");
 				pyr = 0;
 			}
 			if(thief1 <= 0) continue;
 		}
 		else{
 			if(rand()%20 < 19){
-				printf("¹íÀ´ÁË£¡\n");
+				printf("Ghosts comeï¼\n");
 			    thief1 -= (guard1 * 10);
 				guard1 = min((0-thief1) / 10,0);
 			}
@@ -85,26 +85,26 @@ void fight(){
 			sleep(0.400);
 			system("cls");
 			system("color 0c");
-			print("Ä¾ÄËÒÁÒÑÂÙÏÝ£¡");
-			printf("×îÖÕ·ÖÊý£º%ld\n",score);
+			print("Mummy deterioratedï¼");
+			printf("Final Scoreï¼š%ld\n",score);
 			sleep(1.500);
 			system("cls");
-			print("GAME OVER£¡"); 
+			print("GAME OVERï¼"); 
 			sleep(0.500);
 			return;
 		}
 		sleep(0.700);
 		system("cls");
 	}
-}
+} 
 void game(){
 	srand(time(NULL));
-	print("ÔÚ¹Å°£¼°£¬ÈýÇ§ÄêÇ°£¬ÄãËÀÁË£¬²¢Ñ¡ÁËÒ»¸öÄ¾ÄËÒÁ¡£");
+	print("In ancient Egypt, 3000 years ago, you diedï¼Œand ... selected a mummy.");
 	int rmummy = rand()%5 + 1,smummy;
-	printf("Ñ¡Ò»¸öÄ¾ÄËÒÁ(1~5)\n");
+	printf("Select a mummy (1~5)\n");
 	scanf("%d", &smummy);
 	if(smummy==rmummy || smummy == 28){
-		printf("¹æÔòµÄÄ¾ÄËÒÁ£¡");
+		printf("You get a regular mummyï¼continue to start the fight game...");
 		sleep(0.600);
 		system("cls");
 		fight();
@@ -113,17 +113,17 @@ void game(){
 		sleep(0.300);
 		system("cls");
 		system("color 0c");
-		print("²»¹æÔòÄ¾ÄËÒÁ£¡");
-		print("»ð»¯£¡");
-		print("GAME OVER£¡"); 
+		print("Oh, no! You get an irregular mummy.");
+		print("Burned!");
+		print("GAME OVERï¼"); 
 		return;
 	}
 }
 
 int main(){
 	
-	system("title Ä¾ÄËÒÁÍòÊ¥½Ú°æ");
-	print("Áú¼ÒÓÎÏ·¹«Ë¾³öÆ·£ºÄ¾ÄËÒÁ£¨ÍòÊ¥½ÚÌØ±ð°æ£©");
+	system("title Mummy - Halloween Edition");
+	print("created by Longmaoï¼šMummy - Special edition for Halloween 2021");
 	game();
 	return 0;
 }
