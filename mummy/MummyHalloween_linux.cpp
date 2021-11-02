@@ -46,7 +46,7 @@ void fight(){
 		if(thief1 <= 0){
 			printf("You win！Congratulations!\n");
 			usleep(17000);
-			printf("Next wave on the way！");
+			printf("Next wave on the way!");
 			score += 200;
 			pyr += 2;
 			thief1 = thief[rand()%8];
@@ -85,7 +85,7 @@ void fight(){
 			if(thief1 <= 0) continue;
 			usleep(13000);
 			system("echo -e \033[2J");
-			system("color 0c");
+			system("echo -e \033[31m");
 			print("Mummy deteriotated!");
 			printf("Final Score：%ld\n",score);
 			usleep(50000);
